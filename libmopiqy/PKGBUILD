@@ -1,0 +1,44 @@
+# Maintainer: Alexandre Petitjean <alpetitjean@gmail.com>
+
+pkgname=libmopiqy-git
+pkgver=20130814
+pkgrel=1
+pkgdesc="Qt Core library for mopidy"
+arch=('any')
+url="https://github.com/AlexandreP2101/libmopiqy"
+license=('MIT')
+makedepends=('git')
+depends=('qt5-base' 'boost-libs')
+provides=('libmopiqy')
+
+_gitroot=https://github.com/AlexandreP2101/libmopiqy.git
+_gitname=libmopiqy
+
+build() {
+  cd "$srcdir"
+  msg "Connecting to GIT server...."
+
+  if [[ -d "$_gitname" ]]; then
+    cd "$_gitname" && git pull origin
+    msg "The local files are updated."
+  else
+    git clone "$_gitroot" "$_gitname"
+    cd "$_gitname"
+    git submodule init
+    git submodule update
+  fi
+
+  msg "GIT checkout done or server timeout"
+  msg "Starting build..."
+
+  cd "$srcdir/$_gitname"
+  qmake-qt5
+  make
+}
+
+package() {
+  cd "$srcdir/$_gitname"
+  make INSTALL_ROOT="$pkgdir/usr/" install
+}
+
+# vim:set ts=2 sw=2 et:
