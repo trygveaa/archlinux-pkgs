@@ -1,7 +1,7 @@
 # Maintainer: Alexandre Petitjean <alpetitjean@gmail.com>
 
 pkgname=libmopiqy-git
-pkgver=20130814
+pkgver=20130929
 pkgrel=1
 pkgdesc="Qt Core library for mopidy"
 arch=('any')
