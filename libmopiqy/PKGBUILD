@@ -5,13 +5,13 @@ pkgver=20130814
 pkgrel=1
 pkgdesc="Qt Core library for mopidy"
 arch=('any')
-url="https://github.com/AlexandreP2101/libmopiqy"
+url="https://github.com/AlexandrePTJ/libmopiqy"
 license=('MIT')
 makedepends=('git')
 depends=('qt5-base' 'boost-libs')
 provides=('libmopiqy')
 
-_gitroot=https://github.com/AlexandreP2101/libmopiqy.git
+_gitroot=https://github.com/AlexandrePTJ/libmopiqy.git
 _gitname=libmopiqy
 
 build() {
