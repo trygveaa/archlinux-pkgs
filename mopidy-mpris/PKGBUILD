@@ -3,13 +3,14 @@
 pkgname=mopidy-mpris
 _pypiname=Mopidy-MPRIS
 pkgver=1.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Mopidy extension for controlling Mopidy through the MPRIS D-Bus interface"
 arch=('any')
 url="http://www.mopidy.com"
 license=('APACHE')
 depends=(
 	'mopidy>=0.16'
+	'python2-pykka>=1.1'
 	'python2-distribute'
 	'python2-dbus')
 makedepends=('python2')

@@ -3,19 +3,20 @@
 pkgname=mopidy-spotify
 _pypiname=Mopidy-Spotify
 pkgver=1.0.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Mopidy extension for playing music from Spotify"
 arch=('any')
 url="http://www.mopidy.com"
 license=('APACHE')
 depends=(
+	'mopidy>=0.16'
+	'python2-pykka>=1.1'
 	'pyspotify>=1.9'
 	'pyspotify<2'
 	'libspotify>=12'
 	'libspotify<13'
-	'mopidy>=0.16'
 	'python2-distribute')
-makedepends=('python2' 'pyspotify')
+makedepends=('python2')
 provides=('mopidy-spotify')
 source=("https://pypi.python.org/packages/source/M/${_pypiname}/${_pypiname}-${pkgver}.tar.gz")
 md5sums=('7202276ed1d2eae9fe6e1381b57f56cb')
