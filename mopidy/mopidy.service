@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-User=%I
+User=mopidy
 ExecStart=/usr/bin/mopidy
 
 [Install]
