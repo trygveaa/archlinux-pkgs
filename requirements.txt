@@ -1,0 +1,10 @@
+Mopidy==0.19.3
+Mopidy-ALSAMixer==1.0.3
+Mopidy-Beets==1.1.0
+Mopidy-Dirble==0.1.1
+Mopidy-MPRIS==1.1.1
+Mopidy-Scrobbler==1.1.0
+Mopidy-SomaFM==0.7.0
+Mopidy-Spotify==1.2.0
+pyspotify==1.11
+ws4py==0.3.4
