@@ -24,6 +24,11 @@ _EOF
 	true
 }
 
+pre_remove() {
+	systemctl stop mopidy.service &>/dev/null
+	true
+}
+
 post_remove() {
 	getent passwd mopidy &>/dev/null && userdel mopidy >/dev/null
 	getent group mopidy &>/dev/null && groupdel mopidy >/dev/null
